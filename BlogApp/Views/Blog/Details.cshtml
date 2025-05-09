@@ -1,0 +1,12 @@
+﻿@model BlogApp.Models.BlogPost
+@{
+    ViewData["Title"] = "Post Details";
+}
+
+<h2>@Model.Title</h2>
+<p><strong>Author:</strong> @Model.Author</p>
+<p><strong>Date:</strong> @Model.CreatedAt.ToString("MMMM dd, yyyy")</p>
+<p>@Model.Content</p>
+
+<a href="/Blog/Edit/@Model.Id" class="btn btn-primary">Edit</a>
+<a href="/Blog/Index" class="btn btn-secondary">Back to List</a>
