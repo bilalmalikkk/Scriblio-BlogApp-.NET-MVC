@@ -3,10 +3,18 @@
     ViewData["Title"] = "Post Details";
 }
 
-<h2>@Model.Title</h2>
-<p><strong>Author:</strong> @Model.Author</p>
-<p><strong>Date:</strong> @Model.CreatedAt.ToString("MMMM dd, yyyy")</p>
-<p>@Model.Content</p>
+<div class="container py-4">
+    <div class="mb-4">
+        <h2 class="mb-1">@Model.Title</h2>
+        <p class="text-muted mb-0">by <strong>@Model.Author</strong> &middot; @Model.CreatedAt.ToString("MMMM dd, yyyy")</p>
+    </div>
 
-<a href="/Blog/Edit/@Model.Id" class="btn btn-primary">Edit</a>
-<a href="/Blog/Index" class="btn btn-secondary">Back to List</a>
+    <div class="mb-4">
+        <p class="lead">@Model.Content</p>
+    </div>
+
+    <div class="d-flex gap-2">
+        <a href="/Blog/Edit/@Model.Id" class="btn btn-outline-primary">Edit</a>
+        <a href="/Blog/Index" class="btn btn-outline-secondary">Back to List</a>
+    </div>
+</div>

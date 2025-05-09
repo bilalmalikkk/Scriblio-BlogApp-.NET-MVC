@@ -45,6 +45,44 @@ namespace BlogApp.Controllers
             }
             return View(post);
         }
-        
+        public IActionResult Edit(int id)
+        {
+            var post = _context.BlogPosts.Find(id);
+            if (post == null) return NotFound();
+            return View(post);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(BlogPost post)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Update(post);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(post);
+        }
+        public IActionResult Delete(int id)
+        {
+            var post = _context.BlogPosts.Find(id);
+            if (post == null) return NotFound();
+            return View(post);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var post = _context.BlogPosts.Find(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            _context.BlogPosts.Remove(post);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
