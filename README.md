@@ -34,8 +34,8 @@ To run the project locally, you will need:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/scriblio.git
-cd scriblio
+[git clone https://github.com/yourusername/scriblio.git
+cd scriblio](https://github.com/bilalmalikkk/Scriblio-BlogApp-.NET-MVC.git)
 ```
 
 ### Setup the Project
