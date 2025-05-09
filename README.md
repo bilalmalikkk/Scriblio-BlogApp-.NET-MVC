@@ -79,3 +79,7 @@ Please make sure to follow the coding conventions and ensure your code is proper
 * **ASP.NET Core** for the powerful web framework.
 * **Entity Framework Core** for seamless data handling.
 
+![Screenshot 2025-05-09 174244](https://github.com/user-attachments/assets/91f433de-9ed4-4202-8a5a-27175a7f83ef)
+
+
+
